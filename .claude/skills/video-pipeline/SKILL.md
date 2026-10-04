@@ -13,6 +13,7 @@ projects/<slug>/
 ├── 01_idea/idea.json     # chosen idea + alternatives
 ├── 02_script/script.json # scenes: narration + on-screen content  (+ script.md for humans)
 ├── 03_timesheet/timesheet.json  # frame-exact timing per scene + caption chunks
+├── 03_visuals/           # generated b-roll images + characters/ + manifest.json (prompt hashes)
 ├── 04_voice/s01.mp3 …  + manifest.json  # real audio durations
 ├── 05_motion/            # Remotion project (copied from assets/remotion-template)
 └── 06_render/final.mp4  + captions.srt
@@ -33,7 +34,17 @@ Then run the stages in order. Stop after each creative stage (idea, script) and 
 Read `references/ideas.md`. Prefer the web_search tool for fresh, niche-specific angles; fall back to `scripts/fetch_ideas.py --niche "<niche>"` (Hacker News + Reddit, no keys). Score 5–8 candidates, pick one, write idea.json.
 
 ## Stage 2 — Script (`02_script/script.json`)
-Read `references/script.md` — it defines the scene types the motion stage can render (`title, kinetic, bullets, stat, quote, outro`). Only use those types. Write script.json and a readable script.md.
+Read `references/script.md` — it defines the scene types the motion stage can render (`title, kinetic, bullets, stat, quote, outro`). Only use those types (`title, kinetic, bullets, stat, quote, outro, broll, diagram`). Write script.json and a readable script.md.
+
+## Stage 2b — Creative direction & visuals (`02_script/art_direction.json`, `03_visuals/`)
+Read `references/creative.md` **before** writing the script: it defines the story/characters, pacing (10–14 short scenes),
+shot variety, `art_direction.json`, and the per-scene `visual` block. Present script + art direction together for approval.
+After approval, generate the pictures (costs Higgsfield credits, ~1 per image — always dry-run first and state the estimate):
+```bash
+python3 $SKILL_DIR/scripts/generate_visuals.py projects/<slug> --dry-run    # estimate, spends nothing
+python3 $SKILL_DIR/scripts/generate_visuals.py projects/<slug> [--only s03,mia] [--force]
+```
+Only missing/stale images are generated, so re-runs are free. **Look at the images** (contact sheet) and regenerate bad ones with `--only <id> --force` before moving on. Needs the `higgsfield` CLI logged in; images are 1 credit each (`nano_banana_2_lite`), characters first, then scenes with the characters as references.
 
 ## Stage 3 — Timesheet (`03_timesheet/timesheet.json`)
 ```bash

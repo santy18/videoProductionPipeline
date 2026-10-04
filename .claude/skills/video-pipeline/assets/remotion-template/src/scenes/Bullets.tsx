@@ -2,15 +2,17 @@ import React from 'react';
 import {AbsoluteFill, spring, useCurrentFrame, useVideoConfig} from 'remotion';
 import {theme} from '../theme';
 import type {SceneProps} from '../types';
+import {zone, panel} from '../layout';
 
-export const Bullets: React.FC<SceneProps> = ({data, durationInFrames}) => {
+export const Bullets: React.FC<SceneProps> = ({data, durationInFrames, image}) => {
   const f = useCurrentFrame(); const {fps} = useVideoConfig();
   const items: string[] = data.items ?? [];
   // spread item reveals across the first ~60% of the scene so they land with the narration
   const step = Math.max(6, Math.floor((durationInFrames * 0.6) / Math.max(1, items.length)));
   const h = spring({frame: f, fps});
   return (
-    <AbsoluteFill style={{justifyContent: 'center', padding: `${theme.safe.top}px ${theme.safe.side}px ${theme.safe.bottom}px`}}>
+    <AbsoluteFill style={{padding: `${theme.safe.top}px ${theme.safe.side}px ${theme.safe.bottom}px`, ...zone(image)}}>
+      <div style={panel(image)}>
       <div style={{fontSize: theme.u(84), fontWeight: 900, marginBottom: theme.u(50), opacity: h}}>{data.heading}</div>
       {items.map((it, i) => {
         const s = spring({frame: f - 10 - i * step, fps, config: {damping: 15}});
@@ -21,6 +23,7 @@ export const Bullets: React.FC<SceneProps> = ({data, durationInFrames}) => {
           </div>
         );
       })}
+      </div>
     </AbsoluteFill>
   );
 };

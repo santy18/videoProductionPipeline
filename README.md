@@ -122,6 +122,16 @@ One audio file per scene, generated with your chosen provider. `manifest.json` r
 
 ---
 
+## Creative direction and b-roll
+
+Videos are built as a story with characters and one illustrated picture per scene, not text on a gradient.
+`references/creative.md` (in the skill) is the director's brief: hook, 10–14 short scenes, shot variety, camera moves.
+- `02_script/art_direction.json` holds the shared style line and the characters (concrete visual descriptions).
+- Each scene in `script.json` may have `visual: {prompt, characters, shot, motion}` (`motion`: push-in, pull-out, pan-left, pan-right, drift).
+- `generate_visuals.py` makes character reference sheets first, then one image per scene with the characters attached as references, via the Higgsfield CLI (`higgsfield auth login` once). It is incremental: unchanged prompts cost nothing, edited ones are regenerated, `--dry-run` prints the credit estimate, `visuals.max_credits` (default 25) is a hard cap.
+- Remotion renders each image as a slow Ken Burns move with scrims, vignette and grain; text scenes sit in the top zone on top; scenes enter with slide/zoom/wipe/dissolve transitions. New scene types: `broll` (picture beat, optional label) and `diagram` (animated triangle with 3 labels).
+- Cost: `nano_banana_2_lite` is 1 credit per image, so an 11-scene video with 2 characters is about 11–14 credits.
+
 ## Project folder layout
 
 ```
@@ -131,7 +141,9 @@ projects/<slug>/
 ├── 01_idea/idea.json
 ├── 02_script/script.json     ← the main file you edit
 ├── 02_script/script.md
+├── 02_script/art_direction.json  style + characters shared by every image
 ├── 03_timesheet/timesheet.json   (generated — don't hand-edit)
+├── 03_visuals/               generated b-roll (sNN.png), characters/, manifest.json
 ├── 04_voice/s01.mp3 … manifest.json
 ├── 05_motion/                full Remotion project
 │   ├── src/Video.tsx         assembles scenes, audio, captions, music
@@ -150,6 +162,8 @@ projects/<slug>/
 | New project | `python3 $S/new_project.py "Topic" --format short\|long\|square [--provider silent]` |
 | Where am I? | `python3 $S/status.py $P` |
 | Idea signals | `python3 $S/fetch_ideas.py --niche "space" --limit 15` |
+| Visuals (cost estimate) | `python3 $S/generate_visuals.py $P --dry-run` |
+| Visuals (generate) | `python3 $S/generate_visuals.py $P [--only s03,mia] [--force]` |
 | Timesheet | `python3 $S/build_timesheet.py $P` |
 | Voice | `python3 $S/generate_voice.py $P [--provider openai] [--only s03,s05]` |
 | Re-sync timing | `python3 $S/build_timesheet.py $P` |

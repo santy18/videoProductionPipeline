@@ -3,7 +3,7 @@
 import argparse, sys
 from pathlib import Path
 sys.path.insert(0, str(Path(__file__).parent))
-from common import FORMATS, STAGES, save, slugify
+from common import FORMATS, STAGES, VISUALS_DEFAULTS, save, slugify
 
 ap = argparse.ArgumentParser()
 ap.add_argument("title")
@@ -28,6 +28,7 @@ save(proj / "project.json", {
     "voice": {"provider": a.provider, "qwen_voice": "santy", "fallback": ["edge"], "edge_voice": "en-US-GuyNeural",
               "voice_id": "", "voice": "alloy", "model": ""},
     "style": {"bg": "#0b0f1a", "fg": "#f5f7ff", "accent": "#ffcc33", "font": "Inter, Helvetica, Arial, sans-serif"},
+    "visuals": dict(VISUALS_DEFAULTS),
     "music_volume": 0.12,
 })
 print(proj)

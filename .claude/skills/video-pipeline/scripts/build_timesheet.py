@@ -36,8 +36,12 @@ for s in script["scenes"]:
         acc += chunk_w
         f1 = round(head * fps + acc / total * speech_frames)
         caps.append({"text": " ".join(w[i:i + per_chunk]).replace("*", ""), "from": f0, "to": max(f1, f0 + 1)})
+    vis = s.get("visual")
+    if vis:
+        img = f"visuals/{s['id']}.png" if (proj / "03_visuals" / f"{s['id']}.png").exists() else None
+        vis = {"image": img, "motion": vis.get("motion", "push-in"), "shot": vis.get("shot")}
     scenes.append({
-        "id": s["id"], "type": s["type"], "narration": s.get("narration", ""),
+        "id": s["id"], "type": s["type"], "visual": vis, "narration": s.get("narration", ""),
         "on_screen": s.get("on_screen", {}),
         "start_frame": cursor, "duration_frames": dur,
         "start_sec": round(cursor / fps, 3), "duration_sec": round(dur / fps, 3),

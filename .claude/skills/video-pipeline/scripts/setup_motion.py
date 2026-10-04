@@ -17,10 +17,17 @@ pv = motion / "public/voice"; pv.mkdir(parents=True, exist_ok=True)
 for f in pv.glob("*"): f.unlink()
 for f in (proj / "04_voice").glob("s*.*"):
     shutil.copy(f, pv / f.name)
+pi = motion / "public/visuals"; pi.mkdir(parents=True, exist_ok=True)
+for f in pi.glob("*"): f.unlink()
+for f in (proj / "03_visuals").glob("s*.png"):
+    shutil.copy(f, pi / f.name)
 music = proj / "assets/music.mp3"
 ts["has_music"] = music.exists()
 if music.exists():
     shutil.copy(music, motion / "public/music.mp3")
     print("music added")
+for sc in ts["scenes"]:
+    if sc.get("visual"):
+        sc["visual"]["image"] = f"visuals/{sc['id']}.png" if (pi / f"{sc['id']}.png").exists() else None
 save(motion / "src/timesheet.json", ts)
 print(f"motion ready: {motion}  ({ts['total_sec']}s)")

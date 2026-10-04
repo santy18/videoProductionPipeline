@@ -15,12 +15,15 @@ This workspace produces videos with the **video-pipeline** skill. Always use tha
 - Tone: punchy, a little playful, never clickbait-false
 - Voice: provider `qwen` (local server, voice `santy`; start it per README before voice stage), fallback `edge` / `en-US-GuyNeural`
 - Style: bg `#0b0f1a`, text `#f5f7ff`, accent `#ffcc33`
+- Visuals: stylized flat illustration (bold shapes, paper grain, navy/amber/coral), one story + 1–2 characters per video (no channel mascot); images via Higgsfield `nano_banana_2_lite`, ~1 credit each, budget ≤ 20 credits per video (`visuals.max_credits` 25 is the hard cap)
 - CTA on the outro: "Follow for more"
 
 When creating a project, write these defaults into its `project.json`.
 
 ## Workflow rules
-- Pause for my approval after the **idea** and after the **script** — unless I say "autopilot".
+- Pause for my approval after the **idea** and after the **script + art direction** — unless I say "autopilot".
+- Read `references/creative.md` before writing any script: 10–14 scenes of 3–5 s, a `visual` for each, `art_direction.json` for style and characters.
+- Before spending credits run `generate_visuals.py --dry-run` and state the estimate; then inspect the generated images (contact sheet) and regenerate bad ones with `--only <id> --force`.
 - Every factual claim and quote needs a source in `idea.json`; never invent attributions.
 - After voice, always re-run `build_timesheet.py` before motion.
 - After rendering, extract a contact sheet of frames and check it before saying it's done.
