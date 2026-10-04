@@ -1,0 +1,187 @@
+{
+  "title": "Sternberg's Love Triangle",
+  "scenes": [
+    {
+      "id": "s01",
+      "type": "kinetic",
+      "narration": "Every kind of love is a mix of three ingredients.",
+      "on_screen": {
+        "text": "Love = *three* ingredients"
+      },
+      "visual": {
+        "prompt": "Mia and Leo sit close on a rooftop at dusk, her head on his shoulder, city lights glowing behind them",
+        "characters": [
+          "mia",
+          "leo"
+        ],
+        "shot": "wide shot, slightly low angle",
+        "motion": "push-in"
+      }
+    },
+    {
+      "id": "s02",
+      "type": "diagram",
+      "narration": "Psychologist Robert Sternberg drew them as a triangle.",
+      "on_screen": {
+        "heading": "Sternberg, 1986",
+        "labels": [
+          "Intimacy",
+          "Passion",
+          "Commitment"
+        ]
+      }
+    },
+    {
+      "id": "s03",
+      "type": "broll",
+      "narration": "Intimacy is closeness, feeling truly understood.",
+      "on_screen": {
+        "text": "Intimacy"
+      },
+      "visual": {
+        "prompt": "Close-up of Mia's and Leo's hands wrapped around two steaming coffee cups on a small table, fingertips almost touching",
+        "characters": [
+          "mia",
+          "leo"
+        ],
+        "shot": "close-up on hands",
+        "motion": "push-in"
+      }
+    },
+    {
+      "id": "s04",
+      "type": "broll",
+      "narration": "Passion is the spark: attraction and butterflies.",
+      "on_screen": {
+        "text": "Passion"
+      },
+      "visual": {
+        "prompt": "Mia glances shyly at Leo across a cosy cafe, warm sparks of light floating between them",
+        "characters": [
+          "mia",
+          "leo"
+        ],
+        "shot": "medium shot, over the shoulder",
+        "motion": "pan-right"
+      }
+    },
+    {
+      "id": "s05",
+      "type": "broll",
+      "narration": "Commitment is the decision to stay.",
+      "on_screen": {
+        "text": "Commitment"
+      },
+      "visual": {
+        "prompt": "Mia and Leo carry a cardboard box together through the doorway of their new apartment, smiling",
+        "characters": [
+          "mia",
+          "leo"
+        ],
+        "shot": "medium shot from behind",
+        "motion": "pull-out"
+      }
+    },
+    {
+      "id": "s06",
+      "type": "kinetic",
+      "narration": "Mix any two, and you get a different love.",
+      "on_screen": {
+        "text": "Mix any *two*"
+      },
+      "visual": {
+        "prompt": "Three softly glowing overlapping circles in coral, amber and blue on a deep navy background, abstract and calm",
+        "characters": [],
+        "shot": "symmetrical abstract composition",
+        "motion": "drift"
+      }
+    },
+    {
+      "id": "s07",
+      "type": "title",
+      "narration": "Intimacy plus passion: romantic love.",
+      "on_screen": {
+        "title": "Romantic",
+        "subtitle": "Intimacy + Passion"
+      },
+      "visual": {
+        "prompt": "Mia and Leo slow-dance barefoot in a warm kitchen at night, string lights overhead",
+        "characters": [
+          "mia",
+          "leo"
+        ],
+        "shot": "wide shot",
+        "motion": "pan-left"
+      }
+    },
+    {
+      "id": "s08",
+      "type": "title",
+      "narration": "Intimacy plus commitment: companionate love.",
+      "on_screen": {
+        "title": "Companionate",
+        "subtitle": "Intimacy + Commitment"
+      },
+      "visual": {
+        "prompt": "Mia and Leo relax together on a sofa reading, a blanket over their knees, a cat asleep between them, quiet evening",
+        "characters": [
+          "mia",
+          "leo"
+        ],
+        "shot": "medium shot",
+        "motion": "push-in"
+      }
+    },
+    {
+      "id": "s09",
+      "type": "title",
+      "narration": "Passion plus commitment: fatuous love.",
+      "on_screen": {
+        "title": "Fatuous",
+        "subtitle": "Passion + Commitment"
+      },
+      "visual": {
+        "prompt": "A flamboyant young couple in a wedding chapel glowing with neon heart and star shapes (no words or signs), rushing a ceremony, looking excited but not at each other",
+        "characters": [],
+        "shot": "wide shot",
+        "motion": "pull-out"
+      }
+    },
+    {
+      "id": "s10",
+      "type": "diagram",
+      "narration": "All three together is consummate love: the complete kind.",
+      "on_screen": {
+        "labels": [
+          "Intimacy",
+          "Passion",
+          "Commitment"
+        ],
+        "highlight": [
+          0,
+          1,
+          2
+        ],
+        "caption": "Consummate love"
+      }
+    },
+    {
+      "id": "s11",
+      "type": "outro",
+      "narration": "So which ingredient is strongest in yours? Follow for more.",
+      "on_screen": {
+        "text": "Which one is yours?",
+        "cta": "Follow for more"
+      },
+      "visual": {
+        "prompt": "Silhouettes of Mia and Leo walking hand in hand along a hilltop at golden hour, long shadows",
+        "characters": [
+          "mia",
+          "leo"
+        ],
+        "shot": "wide shot, low angle",
+        "motion": "push-in"
+      }
+    }
+  ]
+}

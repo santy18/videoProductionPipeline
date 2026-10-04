@@ -1,0 +1,391 @@
+{
+  "title": "Sternberg's Love Triangle",
+  "status": "synced",
+  "fps": 30,
+  "width": 1080,
+  "height": 1920,
+  "total_frames": 1386,
+  "total_sec": 46.2,
+  "style": {
+    "bg": "#0b0f1a",
+    "fg": "#f5f7ff",
+    "accent": "#ffcc33",
+    "font": "Inter, Helvetica, Arial, sans-serif"
+  },
+  "music_volume": 0.12,
+  "scenes": [
+    {
+      "id": "s01",
+      "type": "kinetic",
+      "visual": {
+        "image": "visuals/s01.png",
+        "motion": "push-in",
+        "shot": "wide shot, slightly low angle"
+      },
+      "narration": "Every kind of love is a mix of three ingredients.",
+      "on_screen": {
+        "text": "Love = *three* ingredients"
+      },
+      "start_frame": 0,
+      "duration_frames": 118,
+      "start_sec": 0.0,
+      "duration_sec": 3.933,
+      "audio": "voice/s01.wav",
+      "audio_offset_frames": 8,
+      "captions": [
+        {
+          "text": "Every kind of love",
+          "from": 8,
+          "to": 44
+        },
+        {
+          "text": "is a mix of",
+          "from": 44,
+          "to": 70
+        },
+        {
+          "text": "three ingredients.",
+          "from": 70,
+          "to": 104
+        }
+      ]
+    },
+    {
+      "id": "s02",
+      "type": "diagram",
+      "visual": null,
+      "narration": "Psychologist Robert Sternberg drew them as a triangle.",
+      "on_screen": {
+        "heading": "Sternberg, 1986",
+        "labels": [
+          "Intimacy",
+          "Passion",
+          "Commitment"
+        ]
+      },
+      "start_frame": 118,
+      "duration_frames": 127,
+      "start_sec": 3.933,
+      "duration_sec": 4.233,
+      "audio": "voice/s02.wav",
+      "audio_offset_frames": 8,
+      "captions": [
+        {
+          "text": "Psychologist Robert Sternberg drew",
+          "from": 8,
+          "to": 73
+        },
+        {
+          "text": "them as a triangle.",
+          "from": 73,
+          "to": 113
+        }
+      ]
+    },
+    {
+      "id": "s03",
+      "type": "broll",
+      "visual": {
+        "image": "visuals/s03.png",
+        "motion": "push-in",
+        "shot": "close-up on hands"
+      },
+      "narration": "Intimacy is closeness, feeling truly understood.",
+      "on_screen": {
+        "text": "Intimacy"
+      },
+      "start_frame": 245,
+      "duration_frames": 149,
+      "start_sec": 8.167,
+      "duration_sec": 4.967,
+      "audio": "voice/s03.wav",
+      "audio_offset_frames": 8,
+      "captions": [
+        {
+          "text": "Intimacy is closeness, feeling",
+          "from": 8,
+          "to": 88
+        },
+        {
+          "text": "truly understood.",
+          "from": 88,
+          "to": 135
+        }
+      ]
+    },
+    {
+      "id": "s04",
+      "type": "broll",
+      "visual": {
+        "image": "visuals/s04.png",
+        "motion": "pan-right",
+        "shot": "medium shot, over the shoulder"
+      },
+      "narration": "Passion is the spark: attraction and butterflies.",
+      "on_screen": {
+        "text": "Passion"
+      },
+      "start_frame": 394,
+      "duration_frames": 132,
+      "start_sec": 13.133,
+      "duration_sec": 4.4,
+      "audio": "voice/s04.wav",
+      "audio_offset_frames": 8,
+      "captions": [
+        {
+          "text": "Passion is the spark:",
+          "from": 8,
+          "to": 58
+        },
+        {
+          "text": "attraction and butterflies.",
+          "from": 58,
+          "to": 118
+        }
+      ]
+    },
+    {
+      "id": "s05",
+      "type": "broll",
+      "visual": {
+        "image": "visuals/s05.png",
+        "motion": "pull-out",
+        "shot": "medium shot from behind"
+      },
+      "narration": "Commitment is the decision to stay.",
+      "on_screen": {
+        "text": "Commitment"
+      },
+      "start_frame": 526,
+      "duration_frames": 89,
+      "start_sec": 17.533,
+      "duration_sec": 2.967,
+      "audio": "voice/s05.wav",
+      "audio_offset_frames": 8,
+      "captions": [
+        {
+          "text": "Commitment is the decision",
+          "from": 8,
+          "to": 57
+        },
+        {
+          "text": "to stay.",
+          "from": 57,
+          "to": 75
+        }
+      ]
+    },
+    {
+      "id": "s06",
+      "type": "kinetic",
+      "visual": {
+        "image": "visuals/s06.png",
+        "motion": "drift",
+        "shot": "symmetrical abstract composition"
+      },
+      "narration": "Mix any two, and you get a different love.",
+      "on_screen": {
+        "text": "Mix any *two*"
+      },
+      "start_frame": 615,
+      "duration_frames": 108,
+      "start_sec": 20.5,
+      "duration_sec": 3.6,
+      "audio": "voice/s06.wav",
+      "audio_offset_frames": 8,
+      "captions": [
+        {
+          "text": "Mix any two, and",
+          "from": 8,
+          "to": 42
+        },
+        {
+          "text": "you get a different",
+          "from": 42,
+          "to": 82
+        },
+        {
+          "text": "love.",
+          "from": 82,
+          "to": 94
+        }
+      ]
+    },
+    {
+      "id": "s07",
+      "type": "title",
+      "visual": {
+        "image": "visuals/s07.png",
+        "motion": "pan-left",
+        "shot": "wide shot"
+      },
+      "narration": "Intimacy plus passion: romantic love.",
+      "on_screen": {
+        "title": "Romantic",
+        "subtitle": "Intimacy + Passion"
+      },
+      "start_frame": 723,
+      "duration_frames": 125,
+      "start_sec": 24.1,
+      "duration_sec": 4.167,
+      "audio": "voice/s07.wav",
+      "audio_offset_frames": 8,
+      "captions": [
+        {
+          "text": "Intimacy plus passion: romantic",
+          "from": 8,
+          "to": 94
+        },
+        {
+          "text": "love.",
+          "from": 94,
+          "to": 111
+        }
+      ]
+    },
+    {
+      "id": "s08",
+      "type": "title",
+      "visual": {
+        "image": "visuals/s08.png",
+        "motion": "push-in",
+        "shot": "medium shot"
+      },
+      "narration": "Intimacy plus commitment: companionate love.",
+      "on_screen": {
+        "title": "Companionate",
+        "subtitle": "Intimacy + Commitment"
+      },
+      "start_frame": 848,
+      "duration_frames": 137,
+      "start_sec": 28.267,
+      "duration_sec": 4.567,
+      "audio": "voice/s08.wav",
+      "audio_offset_frames": 8,
+      "captions": [
+        {
+          "text": "Intimacy plus commitment: companionate",
+          "from": 8,
+          "to": 107
+        },
+        {
+          "text": "love.",
+          "from": 107,
+          "to": 123
+        }
+      ]
+    },
+    {
+      "id": "s09",
+      "type": "title",
+      "visual": {
+        "image": "visuals/s09.png",
+        "motion": "pull-out",
+        "shot": "wide shot"
+      },
+      "narration": "Passion plus commitment: fatuous love.",
+      "on_screen": {
+        "title": "Fatuous",
+        "subtitle": "Passion + Commitment"
+      },
+      "start_frame": 985,
+      "duration_frames": 113,
+      "start_sec": 32.833,
+      "duration_sec": 3.767,
+      "audio": "voice/s09.wav",
+      "audio_offset_frames": 8,
+      "captions": [
+        {
+          "text": "Passion plus commitment: fatuous",
+          "from": 8,
+          "to": 84
+        },
+        {
+          "text": "love.",
+          "from": 84,
+          "to": 99
+        }
+      ]
+    },
+    {
+      "id": "s10",
+      "type": "diagram",
+      "visual": null,
+      "narration": "All three together is consummate love: the complete kind.",
+      "on_screen": {
+        "labels": [
+          "Intimacy",
+          "Passion",
+          "Commitment"
+        ],
+        "highlight": [
+          0,
+          1,
+          2
+        ],
+        "caption": "Consummate love"
+      },
+      "start_frame": 1098,
+      "duration_frames": 151,
+      "start_sec": 36.6,
+      "duration_sec": 5.033,
+      "audio": "voice/s10.wav",
+      "audio_offset_frames": 8,
+      "captions": [
+        {
+          "text": "All three together is",
+          "from": 8,
+          "to": 58
+        },
+        {
+          "text": "consummate love: the complete",
+          "from": 58,
+          "to": 124
+        },
+        {
+          "text": "kind.",
+          "from": 124,
+          "to": 137
+        }
+      ]
+    },
+    {
+      "id": "s11",
+      "type": "outro",
+      "visual": {
+        "image": "visuals/s11.png",
+        "motion": "push-in",
+        "shot": "wide shot, low angle"
+      },
+      "narration": "So which ingredient is strongest in yours? Follow for more.",
+      "on_screen": {
+        "text": "Which one is yours?",
+        "cta": "Follow for more"
+      },
+      "start_frame": 1249,
+      "duration_frames": 137,
+      "start_sec": 41.633,
+      "duration_sec": 4.567,
+      "audio": "voice/s11.wav",
+      "audio_offset_frames": 8,
+      "captions": [
+        {
+          "text": "So which ingredient is",
+          "from": 8,
+          "to": 52
+        },
+        {
+          "text": "strongest in yours? Follow",
+          "from": 52,
+          "to": 103
+        },
+        {
+          "text": "for more.",
+          "from": 103,
+          "to": 123
+        }
+      ]
+    }
+  ],
+  "has_music": false
+}

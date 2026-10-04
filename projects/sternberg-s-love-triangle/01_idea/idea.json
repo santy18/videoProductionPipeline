@@ -1,0 +1,67 @@
+{
+  "chosen": {
+    "title": "Every Kind of Love Is a Mix of 3 Ingredients (v2, illustrated)",
+    "angle": "Sternberg's triangle as a recipe: three ingredients (intimacy, passion, commitment); every mix gives a different kind of love. Frame as a quick self-check, not a lecture.",
+    "hook": "Every kind of love is a mix of just three ingredients.",
+    "audience": "curious adults, no jargon",
+    "claims": [
+      {
+        "claim": "Robert Sternberg published 'A Triangular Theory of Love' in Psychological Review in 1986 (vol. 93, pp. 119-135).",
+        "source": 0
+      },
+      {
+        "claim": "The three components are intimacy, passion, and decision/commitment.",
+        "source": 0
+      },
+      {
+        "claim": "Intimacy = closeness, connectedness, bondedness; passion = drives behind attraction, romance, arousal; commitment = the decision to love and to maintain that love.",
+        "source": 1
+      },
+      {
+        "claim": "The theory yields eight types: nonlove, liking, infatuation, empty, romantic, companionate, fatuous, consummate.",
+        "source": 0
+      },
+      {
+        "claim": "Romantic = passion + intimacy, no commitment.",
+        "source": 1
+      },
+      {
+        "claim": "Companionate = intimacy + commitment, no passion (e.g. deep friendships, long marriages where the heat has faded).",
+        "source": 1
+      },
+      {
+        "claim": "Fatuous = passion + commitment, no intimacy.",
+        "source": 1
+      },
+      {
+        "claim": "Consummate = all three; the 'complete' love.",
+        "source": 1
+      }
+    ],
+    "sources": [
+      "https://en.wikipedia.org/wiki/Triangular_theory_of_love",
+      "https://www.simplypsychology.org/types-of-love-we-experience.html",
+      "https://www.ebsco.com/research-starters/psychology/triangular-theory-love",
+      "https://www.scirp.org/reference/referencespapers?referenceid=1930354"
+    ],
+    "notes": "v2 of the Sternberg video with art direction, characters (Mia & Leo) and illustrated b-roll. Facts unchanged and sourced as in v1."
+  },
+  "alternatives": [
+    {
+      "title": "The 8 Kinds of Love (full list)",
+      "angle": "Rapid-fire tour of all eight types incl. nonlove, liking, infatuation, empty love",
+      "score": 15
+    },
+    {
+      "title": "Fatuous Love: Why Whirlwind Marriages Feel Real",
+      "angle": "Deep dive on passion + commitment without intimacy",
+      "score": 13
+    },
+    {
+      "title": "Why Long Marriages Fade to 'Companionate'",
+      "angle": "Passion declines, intimacy and commitment stay",
+      "score": 12
+    }
+  ],
+  "created": "2026-10-04"
+}
