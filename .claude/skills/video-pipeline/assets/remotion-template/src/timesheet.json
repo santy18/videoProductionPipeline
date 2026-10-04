@@ -1,0 +1,226 @@
+{
+  "title": "Why the Moon Is Drifting Away",
+  "status": "synced",
+  "fps": 30,
+  "width": 1080,
+  "height": 1920,
+  "total_frames": 905,
+  "total_sec": 30.17,
+  "style": {
+    "bg": "#0b0f1a",
+    "fg": "#f5f7ff",
+    "accent": "#ffcc33",
+    "font": "Inter, Helvetica, Arial, sans-serif"
+  },
+  "music_volume": 0.12,
+  "scenes": [
+    {
+      "id": "s01",
+      "type": "title",
+      "narration": "The Moon is leaving us, a little more every single year.",
+      "on_screen": {
+        "title": "The Moon Is Leaving",
+        "subtitle": "slowly"
+      },
+      "start_frame": 0,
+      "duration_frames": 145,
+      "start_sec": 0.0,
+      "duration_sec": 4.833,
+      "audio": "voice/s01.wav",
+      "audio_offset_frames": 8,
+      "captions": [
+        {
+          "text": "The Moon is leaving",
+          "from": 8,
+          "to": 51
+        },
+        {
+          "text": "us, a little more",
+          "from": 51,
+          "to": 91
+        },
+        {
+          "text": "every single year.",
+          "from": 91,
+          "to": 131
+        }
+      ]
+    },
+    {
+      "id": "s02",
+      "type": "stat",
+      "narration": "Laser measurements show it drifts about three point eight centimetres farther away each year.",
+      "on_screen": {
+        "value": 3.8,
+        "decimals": 1,
+        "suffix": " cm",
+        "label": "farther away every year"
+      },
+      "start_frame": 145,
+      "duration_frames": 179,
+      "start_sec": 4.833,
+      "duration_sec": 5.967,
+      "audio": "voice/s02.wav",
+      "audio_offset_frames": 8,
+      "captions": [
+        {
+          "text": "Laser measurements show it",
+          "from": 8,
+          "to": 53
+        },
+        {
+          "text": "drifts about three point",
+          "from": 53,
+          "to": 95
+        },
+        {
+          "text": "eight centimetres farther away",
+          "from": 95,
+          "to": 146
+        },
+        {
+          "text": "each year.",
+          "from": 146,
+          "to": 165
+        }
+      ]
+    },
+    {
+      "id": "s03",
+      "type": "kinetic",
+      "narration": "The culprit? Our own ocean tides.",
+      "on_screen": {
+        "text": "The culprit? Our own *ocean tides*"
+      },
+      "start_frame": 324,
+      "duration_frames": 89,
+      "start_sec": 10.8,
+      "duration_sec": 2.967,
+      "audio": "voice/s03.wav",
+      "audio_offset_frames": 8,
+      "captions": [
+        {
+          "text": "The culprit? Our own",
+          "from": 8,
+          "to": 50
+        },
+        {
+          "text": "ocean tides.",
+          "from": 50,
+          "to": 75
+        }
+      ]
+    },
+    {
+      "id": "s04",
+      "type": "bullets",
+      "narration": "Tides bulge toward the Moon, Earth's spin drags that bulge ahead, and the bulge tugs the Moon forward, lifting its orbit.",
+      "on_screen": {
+        "heading": "How it works",
+        "items": [
+          "Tides bulge toward the Moon",
+          "Earth's spin drags the bulge ahead",
+          "The bulge tugs the Moon outward"
+        ]
+      },
+      "start_frame": 413,
+      "duration_frames": 258,
+      "start_sec": 13.767,
+      "duration_sec": 8.6,
+      "audio": "voice/s04.wav",
+      "audio_offset_frames": 8,
+      "captions": [
+        {
+          "text": "Tides bulge toward the",
+          "from": 8,
+          "to": 52
+        },
+        {
+          "text": "Moon, Earth's spin drags",
+          "from": 52,
+          "to": 100
+        },
+        {
+          "text": "that bulge ahead, and",
+          "from": 100,
+          "to": 143
+        },
+        {
+          "text": "the bulge tugs the",
+          "from": 143,
+          "to": 181
+        },
+        {
+          "text": "Moon forward, lifting its",
+          "from": 181,
+          "to": 231
+        },
+        {
+          "text": "orbit.",
+          "from": 231,
+          "to": 244
+        }
+      ]
+    },
+    {
+      "id": "s05",
+      "type": "quote",
+      "narration": "As one astronomer put it, the Moon is slowly saying goodbye.",
+      "on_screen": {
+        "text": "The Moon is slowly saying goodbye.",
+        "author": "Placeholder attribution"
+      },
+      "start_frame": 671,
+      "duration_frames": 145,
+      "start_sec": 22.367,
+      "duration_sec": 4.833,
+      "audio": "voice/s05.wav",
+      "audio_offset_frames": 8,
+      "captions": [
+        {
+          "text": "As one astronomer put",
+          "from": 8,
+          "to": 52
+        },
+        {
+          "text": "it, the Moon is",
+          "from": 52,
+          "to": 87
+        },
+        {
+          "text": "slowly saying goodbye.",
+          "from": 87,
+          "to": 131
+        }
+      ]
+    },
+    {
+      "id": "s06",
+      "type": "outro",
+      "narration": "Follow for more strange space facts.",
+      "on_screen": {
+        "text": "Strange space facts",
+        "cta": "Follow"
+      },
+      "start_frame": 816,
+      "duration_frames": 89,
+      "start_sec": 27.2,
+      "duration_sec": 2.967,
+      "audio": "voice/s06.wav",
+      "audio_offset_frames": 8,
+      "captions": [
+        {
+          "text": "Follow for more strange",
+          "from": 8,
+          "to": 51
+        },
+        {
+          "text": "space facts.",
+          "from": 51,
+          "to": 75
+        }
+      ]
+    }
+  ],
+  "has_music": false
+}
