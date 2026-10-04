@@ -1,0 +1,44 @@
+{
+  "scenes": {
+    "s01": {
+      "file": "s01.wav",
+      "duration_sec": 3.76,
+      "provider": "qwen"
+    },
+    "s02": {
+      "file": "s02.wav",
+      "duration_sec": 6.24,
+      "provider": "qwen"
+    },
+    "s03": {
+      "file": "s03.wav",
+      "duration_sec": 3.84,
+      "provider": "qwen"
+    },
+    "s04": {
+      "file": "s04.wav",
+      "duration_sec": 10.4,
+      "provider": "qwen"
+    },
+    "s05": {
+      "file": "s05.wav",
+      "duration_sec": 6.48,
+      "provider": "qwen"
+    },
+    "s06": {
+      "file": "s06.wav",
+      "duration_sec": 5.12,
+      "provider": "qwen"
+    },
+    "s07": {
+      "file": "s07.wav",
+      "duration_sec": 3.68,
+      "provider": "qwen"
+    },
+    "s08": {
+      "file": "s08.wav",
+      "duration_sec": 4.48,
+      "provider": "qwen"
+    }
+  }
+}

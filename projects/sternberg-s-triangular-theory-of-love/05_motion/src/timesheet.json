@@ -1,0 +1,296 @@
+{
+  "title": "Every Kind of Love Is a Mix of 3 Ingredients",
+  "status": "synced",
+  "fps": 30,
+  "width": 1080,
+  "height": 1920,
+  "total_frames": 1492,
+  "total_sec": 49.73,
+  "style": {
+    "bg": "#0b0f1a",
+    "fg": "#f5f7ff",
+    "accent": "#ffcc33",
+    "font": "Inter, Helvetica, Arial, sans-serif"
+  },
+  "music_volume": 0.12,
+  "scenes": [
+    {
+      "id": "s01",
+      "type": "title",
+      "narration": "Every kind of love is a mix of just three ingredients.",
+      "on_screen": {
+        "title": "Love's 3 Ingredients",
+        "subtitle": "Sternberg's triangle"
+      },
+      "start_frame": 0,
+      "duration_frames": 134,
+      "start_sec": 0.0,
+      "duration_sec": 4.467,
+      "audio": "voice/s01.wav",
+      "audio_offset_frames": 8,
+      "captions": [
+        {
+          "text": "Every kind of love",
+          "from": 8,
+          "to": 47
+        },
+        {
+          "text": "is a mix of",
+          "from": 47,
+          "to": 74
+        },
+        {
+          "text": "just three ingredients.",
+          "from": 74,
+          "to": 120
+        }
+      ]
+    },
+    {
+      "id": "s02",
+      "type": "bullets",
+      "narration": "In nineteen eighty-six, psychologist Robert Sternberg named them: intimacy, passion, and commitment.",
+      "on_screen": {
+        "heading": "The Triangle",
+        "items": [
+          "Intimacy: closeness",
+          "Passion: attraction",
+          "Commitment: the decision"
+        ]
+      },
+      "start_frame": 134,
+      "duration_frames": 209,
+      "start_sec": 4.467,
+      "duration_sec": 6.967,
+      "audio": "voice/s02.wav",
+      "audio_offset_frames": 8,
+      "captions": [
+        {
+          "text": "In nineteen eighty-six, psychologist",
+          "from": 8,
+          "to": 75
+        },
+        {
+          "text": "Robert Sternberg named them:",
+          "from": 75,
+          "to": 130
+        },
+        {
+          "text": "intimacy, passion, and commitment.",
+          "from": 130,
+          "to": 195
+        }
+      ]
+    },
+    {
+      "id": "s03",
+      "type": "kinetic",
+      "narration": "Mix any two of them, and you get a different kind of love.",
+      "on_screen": {
+        "text": "Mix any *two*. Get a different *love*."
+      },
+      "start_frame": 343,
+      "duration_frames": 137,
+      "start_sec": 11.433,
+      "duration_sec": 4.567,
+      "audio": "voice/s03.wav",
+      "audio_offset_frames": 8,
+      "captions": [
+        {
+          "text": "Mix any two of",
+          "from": 8,
+          "to": 38
+        },
+        {
+          "text": "them, and you get",
+          "from": 38,
+          "to": 73
+        },
+        {
+          "text": "a different kind of",
+          "from": 73,
+          "to": 111
+        },
+        {
+          "text": "love.",
+          "from": 111,
+          "to": 123
+        }
+      ]
+    },
+    {
+      "id": "s04",
+      "type": "bullets",
+      "narration": "Intimacy plus passion is romantic love. Intimacy plus commitment is companionate. Passion plus commitment? Fatuous.",
+      "on_screen": {
+        "heading": "Two ingredients",
+        "items": [
+          "Intimacy + Passion = Romantic",
+          "Intimacy + Commitment = Companionate",
+          "Passion + Commitment = Fatuous"
+        ]
+      },
+      "start_frame": 480,
+      "duration_frames": 333,
+      "start_sec": 16.0,
+      "duration_sec": 11.1,
+      "audio": "voice/s04.wav",
+      "audio_offset_frames": 8,
+      "captions": [
+        {
+          "text": "Intimacy plus passion is",
+          "from": 8,
+          "to": 77
+        },
+        {
+          "text": "romantic love. Intimacy plus",
+          "from": 77,
+          "to": 155
+        },
+        {
+          "text": "commitment is companionate. Passion",
+          "from": 155,
+          "to": 250
+        },
+        {
+          "text": "plus commitment? Fatuous.",
+          "from": 250,
+          "to": 320
+        }
+      ]
+    },
+    {
+      "id": "s05",
+      "type": "kinetic",
+      "narration": "Companionate love is the deep friendship of a long marriage: close and committed, but the spark has faded.",
+      "on_screen": {
+        "text": "Close. Committed. The *spark* faded."
+      },
+      "start_frame": 813,
+      "duration_frames": 216,
+      "start_sec": 27.1,
+      "duration_sec": 7.2,
+      "audio": "voice/s05.wav",
+      "audio_offset_frames": 8,
+      "captions": [
+        {
+          "text": "Companionate love is the",
+          "from": 8,
+          "to": 53
+        },
+        {
+          "text": "deep friendship of a",
+          "from": 53,
+          "to": 91
+        },
+        {
+          "text": "long marriage: close and",
+          "from": 91,
+          "to": 137
+        },
+        {
+          "text": "committed, but the spark",
+          "from": 137,
+          "to": 182
+        },
+        {
+          "text": "has faded.",
+          "from": 182,
+          "to": 202
+        }
+      ]
+    },
+    {
+      "id": "s06",
+      "type": "kinetic",
+      "narration": "Fatuous love has passion and commitment, but no intimacy underneath.",
+      "on_screen": {
+        "text": "Passion and commitment, *no* *intimacy*"
+      },
+      "start_frame": 1029,
+      "duration_frames": 175,
+      "start_sec": 34.3,
+      "duration_sec": 5.833,
+      "audio": "voice/s06.wav",
+      "audio_offset_frames": 8,
+      "captions": [
+        {
+          "text": "Fatuous love has passion",
+          "from": 8,
+          "to": 64
+        },
+        {
+          "text": "and commitment, but no",
+          "from": 64,
+          "to": 116
+        },
+        {
+          "text": "intimacy underneath.",
+          "from": 116,
+          "to": 161
+        }
+      ]
+    },
+    {
+      "id": "s07",
+      "type": "stat",
+      "narration": "Consummate love has all three. The complete kind.",
+      "on_screen": {
+        "value": 3,
+        "suffix": " of 3",
+        "label": "consummate love"
+      },
+      "start_frame": 1204,
+      "duration_frames": 132,
+      "start_sec": 40.133,
+      "duration_sec": 4.4,
+      "audio": "voice/s07.wav",
+      "audio_offset_frames": 8,
+      "captions": [
+        {
+          "text": "Consummate love has all",
+          "from": 8,
+          "to": 61
+        },
+        {
+          "text": "three. The complete kind.",
+          "from": 61,
+          "to": 118
+        }
+      ]
+    },
+    {
+      "id": "s08",
+      "type": "outro",
+      "narration": "So which ingredient is missing from yours? Follow for more.",
+      "on_screen": {
+        "text": "Which one is missing?",
+        "cta": "Follow for more"
+      },
+      "start_frame": 1336,
+      "duration_frames": 156,
+      "start_sec": 44.533,
+      "duration_sec": 5.2,
+      "audio": "voice/s08.wav",
+      "audio_offset_frames": 8,
+      "captions": [
+        {
+          "text": "So which ingredient is",
+          "from": 8,
+          "to": 59
+        },
+        {
+          "text": "missing from yours? Follow",
+          "from": 59,
+          "to": 119
+        },
+        {
+          "text": "for more.",
+          "from": 119,
+          "to": 142
+        }
+      ]
+    }
+  ],
+  "has_music": false
+}
