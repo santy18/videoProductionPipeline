@@ -10,3 +10,4 @@ viewer/node_modules/
 viewer/dist/
 viewer-queue.jsonl
 .impeccable/mocks/
+projects/
