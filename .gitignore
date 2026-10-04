@@ -5,3 +5,8 @@ __pycache__/
 .env
 *.pyc
 projects/*/05_motion/node_modules/
+
+viewer/node_modules/
+viewer/dist/
+viewer-queue.jsonl
+.impeccable/mocks/

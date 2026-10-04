@@ -4,6 +4,7 @@ This workspace produces videos with the **video-pipeline** skill. Always use tha
 
 ## Layout
 - `projects/<slug>/` — one folder per video (created by `new_project.py`, stages 01–06 inside)
+- `viewer/` — Studio Viewer (`npm run dev` inside it): browse/play/edit projects; see `viewer/README.md`
 - `assets/music/` — licensed background tracks; copy one to `projects/<slug>/assets/music.mp3`
 - `ideas-backlog.md` — running list of unused ideas; add leftovers from stage 1 here
 - `published.md` — log of finished videos (title, date, slug, URL)
