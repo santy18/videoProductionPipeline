@@ -28,3 +28,5 @@ const enc = encodeURIComponent
 export const fileUrl = (slug: string, path: string) => `/files/${enc(slug)}/${path.split('/').map(enc).join('/')}`
 export const thumbUrl = (slug: string, path: string, w = 240) => `/api/thumb/${enc(slug)}?path=${encodeURIComponent(path)}&w=${w}`
 export const posterUrl = (slug: string, t = 1, w = 360) => `/api/poster/${enc(slug)}?t=${t}&w=${w}`
+
+export const downloadUrl = (slug: string, path: string) => `${fileUrl(slug, path)}?download=1`

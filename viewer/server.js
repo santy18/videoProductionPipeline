@@ -12,7 +12,8 @@ import { fileURLToPath } from 'node:url'
 const HERE = path.dirname(fileURLToPath(import.meta.url))
 const ROOT = path.resolve(process.env.VIEWER_ROOT || path.join(HERE, '..', 'projects'))
 const PORT = Number(process.env.PORT || 5173)
-const HOST = process.env.HOST || '127.0.0.1'
+const HOST = process.env.HOST || '0.0.0.0'
+const REMOTE_WRITES = process.env.VIEWER_ALLOW_REMOTE_WRITES === '1'
 const READONLY = process.env.VIEWER_READONLY === '1'
 const DEV = process.argv.includes('--dev')
 const CACHE = path.join(os.tmpdir(), 'studio-viewer-cache')
@@ -156,10 +157,10 @@ async function serveCached(req, res, key, make, mime) {
   return true
 }
 
-function streamFile(req, res, abs, stat) {
+function streamFile(req, res, abs, stat, extra = {}) {
   const type = mimeOf(abs)
   const range = req.headers.range
-  const base = { 'Content-Type': type, 'Accept-Ranges': 'bytes', 'Cache-Control': 'no-cache', 'Last-Modified': new Date(stat.mtimeMs).toUTCString() }
+  const base = { 'Content-Type': type, 'Accept-Ranges': 'bytes', 'Cache-Control': 'no-cache', 'Last-Modified': new Date(stat.mtimeMs).toUTCString(), ...extra }
   if (range) {
     const m = /bytes=(\d*)-(\d*)/.exec(range)
     let start = m && m[1] ? parseInt(m[1], 10) : 0
@@ -190,7 +191,11 @@ function readBody(req, limit = 5_000_000) {
   })
 }
 
+const isLoopback = (a = '') => a === '::1' || a === '127.0.0.1' || a === '::ffff:127.0.0.1'
+
 function sameOrigin(req) {
+  // Writes from other machines on the network are refused unless explicitly allowed.
+  if (!REMOTE_WRITES && !isLoopback(req.socket.remoteAddress)) return false
   const origin = req.headers.origin
   if (!origin) return true
   try {
@@ -320,7 +325,12 @@ async function handle(req, res, vite) {
       let st
       try { st = await fsp.stat(abs) } catch { return send(res, 404, 'Not found') }
       if (st.isDirectory()) return send(res, 400, 'Is a directory')
-      return streamFile(req, res, abs, st)
+      const name = path.basename(abs).replace(/[^\w.\- ]/g, '_')
+      const slugName = decodeURIComponent(slug)
+      const extra = url.searchParams.get('download') === '1'
+        ? { 'Content-Disposition': `attachment; filename="${abs.endsWith('final.mp4') ? slugName : slugName + '-' + name.replace(/\.[^.]+$/, '')}${path.extname(abs)}"` }
+        : {}
+      return streamFile(req, res, abs, st, extra)
     }
     if (vite) return vite.middlewares(req, res, () => send(res, 404, 'Not found'))
     // production: serve dist with SPA fallback
@@ -344,6 +354,10 @@ if (DEV) {
 }
 
 http.createServer((req, res) => handle(req, res, vite)).listen(PORT, HOST, () => {
-  console.log(`Studio Viewer  http://${HOST}:${PORT}  (${DEV ? 'dev' : 'built'}${READONLY ? ', read-only' : ''})`)
+  console.log(`Studio Viewer  http://127.0.0.1:${PORT}  (${DEV ? 'dev' : 'built'}${READONLY ? ', read-only' : ''})`)
+  if (HOST === '0.0.0.0' || HOST === '::') {
+    for (const addrs of Object.values(os.networkInterfaces()))
+      for (const a of addrs ?? []) if (a.family === 'IPv4' && !a.internal) console.log(`On your network  http://${a.address}:${PORT}  (${REMOTE_WRITES ? 'remote edits allowed' : 'view-only from other devices'})`)
+  }
   console.log(`Projects root  ${ROOT}`)
 })

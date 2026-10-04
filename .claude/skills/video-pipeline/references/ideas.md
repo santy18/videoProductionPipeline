@@ -1,6 +1,6 @@
 # Stage 1 — Ideas
 
-Goal: one strong, specific idea that fits the format (Short ≈ 30–60 s, long ≈ 3–8 min).
+Goal: one strong, specific idea that fits the format (Short ≈ 50 s, max 60 s, long ≈ 3–8 min).
 
 1. Get raw signals
    - Preferred: web_search for "<niche> news this week", "<niche> surprising fact", trending questions.

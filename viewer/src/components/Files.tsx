@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useState } from 'react'
-import { api, fileUrl } from '../lib/api'
+import { api, downloadUrl, fileUrl } from '../lib/api'
 import type { Info, TreeNode } from '../lib/types'
 import { Icon } from './Icon'
 import { DocEditor } from './DocEditor'
@@ -85,8 +85,8 @@ function FileViewer({ slug, path, info, characters }: { slug: string; path: stri
     </div>
   )
   if (kind === 'json' || kind === 'text') return <div className="viewer-col">{head}<DocEditor slug={slug} path={path} info={info} characters={characters} /></div>
-  if (kind === 'video') return <div className="viewer-col media">{head}<div className="video-wrap"><VideoPlayer src={fileUrl(slug, path)} /></div></div>
-  if (kind === 'audio') return <div className="viewer-col media">{head}<div className="audio-wrap"><Icon name="audio" size={40} /><h3 className="mono">{name}</h3><AudioClip src={fileUrl(slug, path)} label={name} /></div></div>
+  if (kind === 'video') return <div className="viewer-col media">{head}<div className="video-wrap"><VideoPlayer src={fileUrl(slug, path)} /></div><a className="btn btn-plain dl" href={downloadUrl(slug, path)} download><Icon name="download" size={15} /><span>Download {name}</span></a></div>
+  if (kind === 'audio') return <div className="viewer-col media">{head}<div className="audio-wrap"><Icon name="audio" size={40} /><h3 className="mono">{name}</h3><AudioClip src={fileUrl(slug, path)} label={name} /><a className="btn btn-plain dl" href={downloadUrl(slug, path)} download><Icon name="download" size={15} /><span>Download</span></a></div></div>
   if (kind === 'image') return <div className="viewer-col media">{head}<div className="img-wrap"><img src={fileUrl(slug, path)} alt={name} /></div><a className="small" href={fileUrl(slug, path)} target="_blank" rel="noreferrer">Open full size</a></div>
   return <div className="viewer-col">{head}<Empty icon="file" title="No preview for this file type"><a href={fileUrl(slug, path)} download={name}>Download {name}</a></Empty></div>
 }

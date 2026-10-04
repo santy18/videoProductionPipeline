@@ -4,7 +4,7 @@ import {theme} from '../theme';
 import {zone} from '../layout';
 import type {SceneProps} from '../types';
 
-// Words pop in one by one; *wrapped* words get the accent colour. Words are laid out as inline text with
+// Words pop in one by one; *wrapped* words get the accent colour. (No scale on highlights: it eats the gap to the next word.) Words are laid out as inline text with
 // real spaces (not flex gaps), so adjacent highlighted words can never run together.
 export const Kinetic: React.FC<SceneProps> = ({data, image}) => {
   const f = useCurrentFrame(); const {fps} = useVideoConfig();
@@ -19,7 +19,7 @@ export const Kinetic: React.FC<SceneProps> = ({data, image}) => {
             <React.Fragment key={i}>
               <span style={{
                 color: hl ? theme.accent : theme.fg, opacity: s, display: 'inline-block',
-                transform: `translateY(${(1 - s) * 40}px) scale(${hl ? 1 + 0.08 * s : 1})`,
+                transform: `translateY(${(1 - s) * 40}px)`, fontWeight: hl ? 900 : 850,
               }}>{tok.replace(/\*/g, '')}</span>{' '}
             </React.Fragment>
           );

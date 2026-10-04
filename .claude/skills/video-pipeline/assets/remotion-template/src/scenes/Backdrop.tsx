@@ -19,7 +19,7 @@ export const Backdrop: React.FC<{src: string; motion?: string; durationInFrames:
   return (
     <AbsoluteFill style={{backgroundColor: '#0b0f1a', overflow: 'hidden'}}>
       <Img src={staticFile(src)} style={{width: '100%', height: '100%', objectFit: 'cover', transformOrigin: origin, transform: `translate(${x}%, ${y}%) scale(${scale})`}} />
-      <AbsoluteFill style={{background: 'linear-gradient(to bottom, rgba(5,8,18,.5) 0%, rgba(5,8,18,0) 34%, rgba(5,8,18,0) 68%, rgba(5,8,18,.5) 100%)'}} />
+      <AbsoluteFill style={{background: 'linear-gradient(to bottom, rgba(5,8,18,.68) 0%, rgba(5,8,18,.38) 20%, rgba(5,8,18,0) 42%, rgba(5,8,18,0) 68%, rgba(5,8,18,.5) 100%)'}} />
       <AbsoluteFill style={{background: 'radial-gradient(ellipse at 50% 50%, transparent 55%, rgba(0,0,0,.45) 100%)'}} />
       <AbsoluteFill style={{backgroundImage: grain, opacity: 0.07, mixBlendMode: 'overlay'}} />
     </AbsoluteFill>

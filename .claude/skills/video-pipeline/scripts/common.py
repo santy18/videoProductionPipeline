@@ -7,7 +7,7 @@ FORMATS = {
     "long":   {"width": 1920, "height": 1080, "fps": 30},
     "square": {"width": 1080, "height": 1080, "fps": 30},
 }
-STAGES = ["01_idea", "02_script", "03_timesheet", "03_visuals", "04_voice", "05_motion", "06_render"]
+STAGES = ["01_idea", "02_script", "03_timesheet", "03_visuals", "04_voice", "05_motion", "06_render", "07_publish"]
 ASPECT = {"short": "9:16", "long": "16:9", "square": "1:1"}
 VISUALS_DEFAULTS = {"model": "nano_banana_2_lite", "max_credits": 25}
 NO_TEXT = "No text, no letters, no logos, no watermarks."

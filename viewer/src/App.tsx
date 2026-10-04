@@ -8,6 +8,7 @@ import { Home } from './components/Home'
 import { OverviewView } from './components/Overview'
 import { ScenesView } from './components/Scenes'
 import { FilesView } from './components/Files'
+import { PublishView } from './components/Publish'
 import { Empty, Toaster } from './components/ui'
 import { cx } from './lib/util'
 
@@ -71,7 +72,7 @@ export default function App() {
             <>
               <nav className="where" aria-label="Breadcrumb"><a href="#/">Projects</a><Icon name="chevron" size={12} /><span>{project.title}</span></nav>
               <div className="tabs" role="tablist" aria-label="Project views">
-                {([['scenes', 'Scenes', 'scenes'], ['overview', 'Pipeline', 'grid'], ['files', 'Files', 'folder']] as const).map(([v, l, ic]) => (
+                {([['scenes', 'Scenes', 'scenes'], ['overview', 'Pipeline', 'grid'], ['files', 'Files', 'folder'], ['publish', 'Publish', 'spark']] as const).map(([v, l, ic]) => (
                   <a key={v} role="tab" aria-selected={route.view === v} className={cx('tab', route.view === v && 'on')} href={href({ slug: project.slug, view: v, file: v === 'files' ? route.file : null })}>
                     <Icon name={ic} size={15} />{l}
                   </a>
@@ -85,6 +86,7 @@ export default function App() {
           {route.slug && !project && projects && <Empty icon="alert" title="Project not found">There is no folder called <span className="mono">{route.slug}</span> in projects/. <a href="#/">Back to projects</a></Empty>}
           {route.slug && project && route.view === 'overview' && <OverviewView project={project} />}
           {route.slug && project && route.view === 'scenes' && <ScenesView slug={project.slug} project={project} info={info} sceneId={route.scene} />}
+          {route.slug && project && route.view === 'publish' && <PublishView project={project} />}
           {route.slug && project && route.view === 'files' && <FilesView slug={project.slug} file={route.file} info={info} />}
         </main>
       </div>

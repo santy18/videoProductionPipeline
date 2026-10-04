@@ -12,17 +12,19 @@ This workspace produces videos with the **video-pipeline** skill. Always use tha
 ## Channel defaults  ← edit these
 - Niche: space & science facts
 - Audience: curious adults, no jargon
-- Format: `short` (vertical 1080×1920, 30–50 s, 6–8 scenes)
+- Format: `short` (vertical 1080×1920, aim for ~50 s, hard max 60 s, 10–14 scenes)
 - Tone: punchy, a little playful, never clickbait-false
 - Voice: provider `qwen` (local server, voice `santy`; start it per README before voice stage), fallback `edge` / `en-US-GuyNeural`
 - Style: bg `#0b0f1a`, text `#f5f7ff`, accent `#ffcc33`
 - Visuals: stylized flat illustration (bold shapes, paper grain, navy/amber/coral), one story + 1–2 characters per video (no channel mascot); images via Higgsfield `nano_banana_2_lite`, ~1 credit each, budget ≤ 20 credits per video (`visuals.max_credits` 25 is the hard cap)
 - CTA on the outro: "Follow for more"
+- Publish: after every render write `07_publish/description.md` (TikTok + Instagram): keyword-rich first line, natural search keywords in the body, comment question, source line, exactly 5 hashtags (see `references/publish.md`)
 
 When creating a project, write these defaults into its `project.json`.
 
 ## Workflow rules
 - Pause for my approval after the **idea** and after the **script + art direction** — unless I say "autopilot".
+- Length: a Short between ~45 and 60 s is fine. Do NOT re-write narration or re-generate voice just to shave a few seconds; only fix it if the synced timesheet is over 60 s.
 - Read `references/creative.md` before writing any script: 10–14 scenes of 3–5 s, a `visual` for each, `art_direction.json` for style and characters.
 - Before spending credits run `generate_visuals.py --dry-run` and state the estimate; then inspect the generated images (contact sheet) and regenerate bad ones with `--only <id> --force`.
 - Every factual claim and quote needs a source in `idea.json`; never invent attributions.

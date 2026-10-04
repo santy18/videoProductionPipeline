@@ -16,7 +16,8 @@ projects/<slug>/
 ├── 03_visuals/           # generated b-roll images + characters/ + manifest.json (prompt hashes)
 ├── 04_voice/s01.mp3 …  + manifest.json  # real audio durations
 ├── 05_motion/            # Remotion project (copied from assets/remotion-template)
-└── 06_render/final.mp4  + captions.srt
+├── 06_render/final.mp4  + captions.srt
+└── 07_publish/description.md   # TikTok + Instagram caption, keywords, 5 hashtags
 ```
 
 `SKILL_DIR` below = the folder containing this file.
@@ -71,7 +72,13 @@ bash $SKILL_DIR/scripts/render.sh projects/<slug>
 ```
 Renders with Remotion, then ffmpeg loudness-normalises, and writes `captions.srt`. Requires Node 18+ and ffmpeg. Remotion downloads its own headless Chrome on first render; if that download is blocked (sandboxes), find a local one (`find / -name chrome-headless-shell -type f 2>/dev/null`) and run with `REMOTION_BROWSER=<path>`. On 1-CPU machines don't pass `--concurrency`. Extra Remotion flags go in `REMOTION_FLAGS`. After rendering, extract a contact sheet of frames with ffmpeg and look at it before telling the user it's done.
 
+## Stage 7 — Publish description (`07_publish/description.md`)
+Read `references/publish.md`. After the render, write one caption for TikTok + Instagram: keyword-rich hook line, 2–3 substance
+sentences with natural secondary keywords, a comment question, the source line, "Follow for more", and **exactly 5 hashtags**.
+Choose keywords from what people would actually search; never stuff or use keywords the video doesn't deliver.
+
 ## Rules
+- **Length:** target ≈ 50 s for a Short, hard max 60 s. If the synced timesheet lands anywhere up to 60 s, accept it and move on: do not re-edit narration or re-run voice to trim a few seconds (it wastes time and credits). Only if it exceeds 60 s, cut or merge scenes, then re-run only the changed voice with `--only`.
 - Never skip the timesheet re-sync after voice; out-of-sync captions are the #1 failure.
 - Edits go upstream: change script.json, then re-run 3 → 4 → 3 → 5 → 6. Don't hand-edit timesheet frames.
 - Keep `project.json` as the single source of format/fps/voice settings.

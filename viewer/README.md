@@ -9,6 +9,7 @@ npm run dev        # http://127.0.0.1:5173  (Vite + API in one process)
 npm start          # build once, serve dist/
 ```
 
+- Listens on `0.0.0.0`, so other devices on your network can open it. They get view-only access; edits only work from this machine unless `VIEWER_ALLOW_REMOTE_WRITES=1`. Use `HOST=127.0.0.1` to stay local-only.
 - `VIEWER_READONLY=1` disables every write. `PORT`, `HOST` and `VIEWER_ROOT` override defaults.
 - Writes are limited to `.json`, `.md`, `.srt`, `.txt` inside a project, never `05_motion/`, never `.env`.
 - Saves check the file's mtime; if a pipeline run changed it meanwhile you get a conflict prompt.

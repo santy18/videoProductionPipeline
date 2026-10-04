@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useRef, useState } from 'react'
-import { api, fileUrl, posterUrl, thumbUrl } from '../lib/api'
+import { api, downloadUrl, fileUrl, posterUrl, thumbUrl } from '../lib/api'
 import { loadDoc, parseJson, save, setDraft, stringify, useDoc, isDirty, revert } from '../lib/docs'
 import type { Info, ProjectSummary, Script, ScriptScene, Timesheet, SheetScene } from '../lib/types'
 import { Soundings } from './Soundings'
@@ -114,6 +114,9 @@ export function ScenesView({ slug, project, info, sceneId }: { slug: string; pro
             <VideoPlayer ref={video} src={fileUrl(slug, '06_render/final.mp4')} poster={posterUrl(slug, 1, 540)} marks={marks} onTime={setTime} onPlayState={setPlaying} />
           ) : (
             <div className="no-render"><Icon name="video" size={28} /><strong>No final render</strong><span className="dim small">Run the render stage to preview the video here.</span></div>
+          )}
+          {hasFinal && (
+            <a className="btn btn-plain dl" href={downloadUrl(slug, '06_render/final.mp4')} download><Icon name="download" size={15} /><span>Download video</span></a>
           )}
           {current && (
             <div className="now">

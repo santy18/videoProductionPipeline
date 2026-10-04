@@ -30,6 +30,8 @@ const P: Record<string, string> = {
   list: 'M4 6h16M4 12h16M4 18h16',
   grid: 'M4 4h7v7H4zM13 4h7v7h-7zM4 13h7v7H4zM13 13h7v7h-7z',
   volume: 'M4 9v6h4l5 4V5L8 9zM16 9a4 4 0 0 1 0 6M18.5 6.5a8 8 0 0 1 0 11',
+  download: 'M12 4v11M7 11l5 5 5-5M5 20h14',
+  copy: 'M9 9h10a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1H9a1 1 0 0 1-1-1V10a1 1 0 0 1 1-1zM16 9V5a1 1 0 0 0-1-1H5a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h3',
   expand: 'M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5',
 }
 export function Icon({ name, size = 16, className }: { name: keyof typeof P | string; size?: number; className?: string }) {

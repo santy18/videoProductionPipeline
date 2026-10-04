@@ -1,0 +1,54 @@
+{
+  "scenes": {
+    "s01": {
+      "file": "s01.wav",
+      "duration_sec": 4.32,
+      "provider": "qwen"
+    },
+    "s02": {
+      "file": "s02.wav",
+      "duration_sec": 4.64,
+      "provider": "qwen"
+    },
+    "s03": {
+      "file": "s03.wav",
+      "duration_sec": 2.88,
+      "provider": "qwen"
+    },
+    "s04": {
+      "file": "s04.wav",
+      "duration_sec": 5.68,
+      "provider": "qwen"
+    },
+    "s05": {
+      "file": "s05.wav",
+      "duration_sec": 5.28,
+      "provider": "qwen"
+    },
+    "s06": {
+      "file": "s06.wav",
+      "duration_sec": 4.96,
+      "provider": "qwen"
+    },
+    "s07": {
+      "file": "s07.wav",
+      "duration_sec": 5.44,
+      "provider": "qwen"
+    },
+    "s08": {
+      "file": "s08.wav",
+      "duration_sec": 2.72,
+      "provider": "qwen"
+    },
+    "s09": {
+      "file": "s09.wav",
+      "duration_sec": 5.6,
+      "provider": "qwen"
+    },
+    "s10": {
+      "file": "s10.wav",
+      "duration_sec": 4.64,
+      "provider": "qwen"
+    }
+  }
+}

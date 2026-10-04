@@ -399,3 +399,25 @@ fieldset { border: 0; margin: 0; padding: 0; min-width: 0; }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
 }
+
+/* ---------- publish ---------- */
+.dl { text-decoration: none; justify-content: center; }
+.dl:hover { text-decoration: none; }
+a.btn-primary { color: #fff; }
+.publish { display: grid; grid-template-columns: 300px minmax(0, 640px); gap: 36px; align-items: start; max-width: 1040px; }
+.pub-media { display: grid; gap: 10px; position: sticky; top: 0; }
+.pub-poster { width: 100%; aspect-ratio: 9 / 16; object-fit: cover; border-radius: 10px; background: var(--deep); display: block; }
+.pub-text { display: grid; gap: 18px; }
+.pub-block { display: grid; gap: 8px; }
+.pub-head { display: flex; align-items: center; justify-content: space-between; gap: 10px; }
+.pub-head h2 { font: 600 17px var(--f-serif); }
+.pub-all { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; padding: 12px 0; border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); }
+.pub-src { display: grid; gap: 4px; word-break: break-all; }
+.copy { min-width: 92px; justify-content: center; }
+@media (max-width: 880px) {
+  .publish { grid-template-columns: 1fr; gap: 20px; }
+  .pub-media { position: static; grid-template-columns: 110px 1fr; align-items: start; }
+  .pub-media .pub-poster { grid-row: span 3; }
+  .pub-media p { grid-column: 2; }
+  .btn { height: 44px; }
+}

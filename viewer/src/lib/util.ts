@@ -52,3 +52,17 @@ export function collapseDiff(lines: DiffLine[]): (DiffLine | { kind: 'gap'; coun
   if (gap) out.push({ kind: 'gap', count: gap })
   return out
 }
+
+/** Copy text; falls back to a hidden textarea because the Clipboard API needs HTTPS (a phone on the LAN is plain http). */
+export async function copyText(text: string): Promise<boolean> {
+  try {
+    if (navigator.clipboard && window.isSecureContext) { await navigator.clipboard.writeText(text); return true }
+  } catch { /* fall through */ }
+  const ta = document.createElement('textarea')
+  ta.value = text; ta.setAttribute('readonly', ''); ta.style.cssText = 'position:fixed;top:0;left:0;opacity:0'
+  document.body.appendChild(ta); ta.select(); ta.setSelectionRange(0, text.length)
+  let ok = false
+  try { ok = document.execCommand('copy') } catch { ok = false }
+  ta.remove()
+  return ok
+}

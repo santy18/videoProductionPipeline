@@ -13,11 +13,11 @@ three in one pause.
 - Facts stay sourced (see ideas.md). Creative framing may dramatise; it must never invent attributions or statistics.
 
 ## 2. Pacing
-- Short (≈50 s): **10–14 scenes of 3–5 s**. The picture must change at least every ~3–4 s.
+- Short: **target ≈ 50 s, hard max 60 s** (anything from ~45 to 60 s is acceptable; don't spend effort trimming it). **10–14 scenes of 3–5 s**. The picture must change at least every ~3–4 s.
 - Narration per scene: **6–14 words** (one beat). Vary rhythm: short punchy scene, then a longer one.
 - Alternate scene *kinds* so no two neighbours feel alike: character shot → diagram/stat → b-roll → kinetic text.
 - Use a pattern interrupt around the middle (a stat, a diagram, a sudden close-up) to re-grab attention.
-- The Qwen voice speaks ≈ 2 words/s. Budget: 50 s ≈ 90–100 words.
+- The Qwen voice speaks ≈ 2 words/s. Budget: 50 s ≈ 90–100 words (up to ~115 words is still under 60 s).
 
 ## 3. Shots (variety is what reads as "directed")
 Rotate `shot`: establishing wide · medium two-shot · over-the-shoulder · close-up on hands/face · detail/object

@@ -150,7 +150,8 @@ projects/<slug>/
 │   ├── src/theme.ts          colours, font, safe margins
 │   ├── src/scenes/*.tsx      one file per scene type
 │   └── public/voice/         copied audio
-└── 06_render/final.mp4, raw.mp4, captions.srt
+├── 06_render/final.mp4, raw.mp4, captions.srt
+└── 07_publish/description.md   TikTok + Instagram caption with keywords and 5 hashtags
 ```
 
 ## Command reference
@@ -175,6 +176,12 @@ projects/<slug>/
 `status.py` is the one to remember. It shows a checklist of finished stages, prints the exact next command, and warns when something is out of date (for example, the script was edited after the voice was made).
 
 Formats: `short` = 1080×1920, `long` = 1920×1080, `square` = 1080×1080, all 30 fps.
+
+## Publishing: the description
+
+Stage 7 writes `07_publish/description.md`: a keyword-rich hook line (TikTok and Instagram are searched like search engines),
+2–3 sentences containing natural secondary keywords, a comment question, the source line, a CTA and exactly 5 hashtags.
+`status.py` checks that it exists and has 5 hashtags. Rules and a template are in `references/publish.md`.
 
 ## Settings: project.json
 
